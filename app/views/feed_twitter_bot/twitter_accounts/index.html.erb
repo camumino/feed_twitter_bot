@@ -1,0 +1,31 @@
+<h1>Listing twitter_accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>App</th>
+      <th>Publication</th>
+      <th>Adquisition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twitter_accounts.each do |twitter_account| %>
+      <tr>
+        <td><%= twitter_account.name %></td>
+        <td><%= twitter_account.app_id %></td>
+        <td><%= twitter_account.publication %></td>
+        <td><%= twitter_account.adquisition %></td>
+        <td><%= link_to 'Show', twitter_account %></td>
+        <td><%= link_to 'Edit', edit_twitter_account_path(twitter_account) %></td>
+        <td><%= link_to 'Destroy', twitter_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twitter account', new_twitter_account_path %>

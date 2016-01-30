@@ -1,0 +1,65 @@
+<%= form_for(@rss_item) do |f| %>
+  <% if @rss_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rss_item.errors.count, "error") %> prohibited this rss_item from being saved:</h2>
+
+      <ul>
+      <% @rss_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br>
+    <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :categories %><br>
+    <%= f.text_field :categories %>
+  </div>
+  <div class="field">
+    <%= f.label :pub_date %><br>
+    <%= f.datetime_select :pub_date %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :clean_description %><br>
+    <%= f.text_field :clean_description %>
+  </div>
+  <div class="field">
+    <%= f.label :published_on_twitter %><br>
+    <%= f.check_box :published_on_twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :published_on_twitter_at %><br>
+    <%= f.datetime_select :published_on_twitter_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

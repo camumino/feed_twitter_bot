@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rss_source.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @rss_source.url %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @rss_source.active %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @rss_source.published %>
+</p>
+
+<%= link_to 'Edit', edit_rss_source_path(@rss_source) %> |
+<%= link_to 'Back', rss_sources_path %>

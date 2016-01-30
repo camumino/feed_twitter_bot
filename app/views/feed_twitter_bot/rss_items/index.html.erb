@@ -1,0 +1,47 @@
+<h1>Listing rss_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Content</th>
+      <th>Link</th>
+      <th>Guid</th>
+      <th>Author</th>
+      <th>Categories</th>
+      <th>Pub date</th>
+      <th>Image</th>
+      <th>Clean description</th>
+      <th>Published on twitter</th>
+      <th>Published on twitter at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rss_items.each do |rss_item| %>
+      <tr>
+        <td><%= rss_item.title %></td>
+        <td><%= rss_item.description %></td>
+        <td><%= rss_item.content %></td>
+        <td><%= rss_item.link %></td>
+        <td><%= rss_item.guid %></td>
+        <td><%= rss_item.author %></td>
+        <td><%= rss_item.categories %></td>
+        <td><%= rss_item.pub_date %></td>
+        <td><%= rss_item.image %></td>
+        <td><%= rss_item.clean_description %></td>
+        <td><%= rss_item.published_on_twitter %></td>
+        <td><%= rss_item.published_on_twitter_at %></td>
+        <td><%= link_to 'Show', rss_item %></td>
+        <td><%= link_to 'Edit', edit_rss_item_path(rss_item) %></td>
+        <td><%= link_to 'Destroy', rss_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rss item', new_rss_item_path %>

@@ -7,11 +7,11 @@ require "feed_twitter_bot/version"
 Gem::Specification.new do |s|
   s.name        = "feed_twitter_bot"
   s.version     = FeedTwitterBot::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of FeedTwitterBot."
-  s.description = "TODO: Description of FeedTwitterBot."
+  s.authors     = ["cmuino", "sriera"]
+  s.email       = ["camumino@gmail.com"]
+  s.homepage    = "http://test.com"
+  s.summary     = "FeedTwitterBot."
+  s.description = "Description of FeedTwitterBot."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.1.14.1"
 
   s.add_development_dependency "sqlite3"
-  s.add_dependency "rspec-rails"
-  s.add_dependency "factory_girl_rails"
+  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "factory_girl_rails"
 end
