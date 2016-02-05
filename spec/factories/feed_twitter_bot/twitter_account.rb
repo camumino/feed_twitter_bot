@@ -1,10 +1,11 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
+#Factory.define :apple, :class => Fruit::Apple do |f|
 FactoryGirl.define do
-  factory :feed_twitter_bot_twitter_account, :class => 'TwitterAccount' do
+  factory :twitter_account, :class => 'FeedTwitterBot::TwitterAccount' do
     name "MyString"
     app_id "MyString"
-    publication false
+    publication true
     adquisition false
   end
 end
