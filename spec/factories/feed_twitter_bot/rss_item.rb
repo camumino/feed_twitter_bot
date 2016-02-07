@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :feed_twitter_bot_rss_item, :class => 'RssItem' do
+  factory :rss_item, :class => 'FeedTwitterBot::RssItem' do
     title "MyString"
     description "MyString"
     content "MyString"
