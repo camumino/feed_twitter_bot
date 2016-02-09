@@ -9,7 +9,6 @@ module FeedTwitterBot
     end
 
     it "publish" do
-      #twitter_account_lib = TwitterAccountLib.new("test")
       expect { subject.publish }.to raise_error
     end
 
