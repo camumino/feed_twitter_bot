@@ -1,3 +1,8 @@
 = FeedTwitterBot
 
 This project rocks and uses MIT-LICENSE.
+
+
+= Todo
+
+- Mejorar notificaciones/logging

@@ -150,6 +150,3 @@ DEPENDENCIES
   feed_twitter_bot!
   rspec-rails
   sqlite3
-
-BUNDLED WITH
-   1.10.6

@@ -28,6 +28,7 @@ module FeedTwitterBot
     end
 
     it "publish" do
+      debugger
       expect { subject.publish }.to raise_error
     end
 

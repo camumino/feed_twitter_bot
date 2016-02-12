@@ -45,12 +45,31 @@ module FeedTwitterBot
 
     private
 
-      def follow
+      def follow keywords = {}, count = 50
+        users = []
+
+        results = twitter_rest_client.search("colau", :count => count)
+
+
         raise "To implement"
       end
 
       def unfollow
-        raise "To implement"
+        following = @twitter_rest_client.friend_ids.to_a # A los que seguimos
+        followers = @twitter_rest_client.follower_ids.to_a # Los que nos siguen
+
+        unfollow = following - followers
+        logger.info("Dejamos de seguir a #{unfollow.count} que no nos siguen")
+        
+        unfollow.each do |user|
+          begin    
+            @twitter_rest_client.unfollow(user)
+            logger.info("Dejamos de seguir a usuario con id #{user}")
+            sleep 60
+          rescue Exception => e
+            logger.info("Error al dejar de seguir a: #{user}. Excepcion: #{e}")
+          end
+        end
       end
 
   end
